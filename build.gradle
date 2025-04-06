@@ -12,7 +12,14 @@ plugins {
     id "org.sonarqube" version "6.1.0.5360"
     id 'info.solidsoft.pitest' version '1.15.0'
 }
-
+pitest {
+    targetClasses = ['stirling.software.SPDF.utils.*']
+    targetTests = ['stirling.software.SPDF.utils.*']
+    pitestVersion = '1.15.0'
+    threads = 1
+    outputFormats = ['XML']
+    timestampedReports = false
+}
 import com.github.jk1.license.render.*
 import org.gradle.internal.os.OperatingSystem
 import java.nio.file.Files
@@ -586,12 +593,4 @@ task printMacVersion {
 
 tasks.named('generateOpenApiDocs') {
     doNotTrackState("Tracking state is not supported for this task")
-}
-
-pitest {
-    targetClasses = ['stirling.software.SPDF.*']
-    pitestVersion = '1.15.0'
-    threads = 1
-    outputFormats = ['XML']
-    timestampedReports = false
 }

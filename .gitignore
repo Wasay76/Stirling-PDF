@@ -30,7 +30,6 @@ exampleYmlFiles/stirling/
 SwaggerDoc.json
 
 # Gradle
-.gradle
 .lock
 
 # External tool builders
@@ -115,6 +114,7 @@ SwaggerDoc.json
 .mtj.tmp/
 
 # Package Files #
+*.jar
 *.war
 *.nar
 *.ear
