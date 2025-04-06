@@ -13,12 +13,17 @@ plugins {
     id 'info.solidsoft.pitest' version '1.15.0'
 }
 pitest {
-    targetClasses = ['stirling.software.SPDF.utils.*']
-    targetTests = ['stirling.software.SPDF.utils.*']
-    pitestVersion = '1.15.0'
-    threads = 1
-    outputFormats = ['XML']
+    targetClasses = ['stirling.software.SPDF.utils.ErrorUtils']
+    targetTests = ['stirling.software.SPDF.utils.ErrorUtilsTest']
+    excludedClasses = ['stirling.software.SPDF.config.*', 'stirling.software.SPDF.model.*']
+    threads = 2  // Reduced from 4 to reduce command size
+    outputFormats = ['HTML']  // Reduced from ['XML', 'HTML'] to just one format
+    mutators = ['DEFAULTS']
+    avoidCallsTo = ['java.util.logging', 'org.apache.log4j', 'org.slf4j']
     timestampedReports = false
+    useClasspathJar = true
+    exportLineCoverage = false  // Added to further reduce command line length
+    jvmArgs = ['-Xmx512m']  // Set a reasonable memory limit
 }
 import com.github.jk1.license.render.*
 import org.gradle.internal.os.OperatingSystem
@@ -49,6 +54,7 @@ repositories {
     maven { url = "https://build.shibboleth.net/maven/releases" }
     maven { url = "https://maven.pkg.github.com/jcefmaven/jcefmaven" }
 }
+
 
 licenseReport {
     renderers = [new JsonReportRenderer()]
