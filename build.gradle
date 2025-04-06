@@ -10,6 +10,7 @@ plugins {
     //id "nebula.lint" version "19.0.3"
     id("org.panteleyev.jpackageplugin") version "1.6.1"
     id "org.sonarqube" version "6.1.0.5360"
+    id 'info.solidsoft.pitest' version '1.15.0'
 }
 
 import com.github.jk1.license.render.*
@@ -33,7 +34,7 @@ version = "0.45.1"
 
 java {
     // 17 is lowest but we support and recommend 21
-    sourceCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_23
 }
 
 repositories {
@@ -585,4 +586,12 @@ task printMacVersion {
 
 tasks.named('generateOpenApiDocs') {
     doNotTrackState("Tracking state is not supported for this task")
+}
+
+pitest {
+    targetClasses = ['stirling.software.SPDF.*']
+    pitestVersion = '1.15.0'
+    threads = 1
+    outputFormats = ['XML']
+    timestampedReports = false
 }
