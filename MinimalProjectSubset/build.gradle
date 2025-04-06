@@ -1,0 +1,66 @@
+plugins {
+    id 'java'
+    id 'info.solidsoft.pitest' version '1.15.0' // Use the same version
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+// You might need to adjust this based on ErrorUtils's source
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+dependencies {
+    // --- Core Dependencies for ErrorUtils & ErrorUtilsTest ---
+    // Add ONLY what's directly needed by ErrorUtils.java and ErrorUtilsTest.java
+    // Start with these, compile, and add more based on errors:
+
+    // JUnit 5 (Essential for running ErrorUtilsTest)
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.4' // Use a recent version
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.4'
+
+    // Likely needed by ErrorUtilsTest
+    testImplementation 'org.mockito:mockito-core:5.11.0' // Or latest 5.x
+    testImplementation 'org.assertj:assertj-core:3.26.3' // Or latest 3.x
+
+    // Potentially needed by ErrorUtils or its test (check imports)
+    // implementation 'org.slf4j:slf4j-api:2.0.13' // If it uses logging
+    implementation 'org.springframework:spring-web:6.1.13' // If it uses ResponseEntity, HttpStatus etc. (Might pull in more)
+    implementation 'org.springframework:spring-webmvc:6.1.13' // If it uses Model, ModelAndView
+    // Spring Boot Test (If ErrorUtilsTest uses Spring Boot testing features like @SpringBootTest, @MockBean, etc.)
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.4.4' // Match original project's Spring Boot version if possible
+
+    // --- Main Dependencies ---
+    // Lombok (If ErrorUtils.java or ErrorUtilsTest.java use annotations like @Slf4j, @RequiredArgsConstructor etc.)
+    compileOnly 'org.projectlombok:lombok:1.18.38' // Match original version
+    annotationProcessor 'org.projectlombok:lombok:1.18.38'
+
+    // SLF4j API (Needed if @Slf4j is used)
+    implementation 'org.slf4j:slf4j-api:2.0.13' // Use a recent version
+
+    // Spring Web (Only if ErrorUtils DIRECTLY uses ResponseEntity, HttpStatus, WebRequest, etc.)
+    // Check the imports in ErrorUtils.java. If needed, uncomment:
+    // implementation 'org.springframework:spring-web:6.2.5'
+
+    // --- Pitest JUnit 5 Plugin --- <--- ADD THIS
+    pitest 'org.pitest:pitest-junit5-plugin:1.2.1' // Add the plugin for JUnit 5 support
+}
+
+test {
+    useJUnitPlatform()
+}
+
+pitest {
+    targetClasses = ['stirling.software.SPDF.utils.ErrorUtils'] // Adjust package if needed
+    targetTests = ['stirling.software.SPDF.utils.ErrorUtilsTest']   // Adjust package if needed
+    // Add other minimal pitest configs if desired (threads, outputFormats)
+    // DO NOT add excludedClasses, avoidCallsTo etc. unless absolutely necessary
+    threads = 2
+    outputFormats = ['HTML']
+    timestampedReports = false
+    // useClasspathJar = true // Probably not needed with so few dependencies, but harmless
+}
