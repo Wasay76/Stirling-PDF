@@ -34,7 +34,7 @@ version = "0.45.1"
 
 java {
     // 17 is lowest but we support and recommend 21
-    sourceCompatibility = JavaVersion.VERSION_23
+    sourceCompatibility = JavaVersion.VERSION_17
 }
 
 repositories {
