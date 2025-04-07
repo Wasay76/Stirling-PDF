@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="stirling.software.SPDF.model.AttemptCounterTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2025-04-07T09:05:20" hostname="DESKTOP-LLJ74U5" time="0.107">
+  <properties/>
+  <testcase name="getAttemptCount_ReturnsCurrentCount()" classname="stirling.software.SPDF.model.AttemptCounterTest" time="0.013"/>
+  <testcase name="invert_negs_mutations()" classname="stirling.software.SPDF.model.AttemptCounterTest" time="0.001"/>
+  <testcase name="getLastAttemptTime_ReturnsLastTime()" classname="stirling.software.SPDF.model.AttemptCounterTest" time="0.02"/>
+  <testcase name="multipleOperations_MaintainsCorrectState()" classname="stirling.software.SPDF.model.AttemptCounterTest" time="0.007"/>
+  <testcase name="shouldReset_ReturnsTrueWhenTimeExceeded()" classname="stirling.software.SPDF.model.AttemptCounterTest" time="0.001"/>
+  <testcase name="shouldReset_ReturnsFalseWhenTimeNotExceeded()" classname="stirling.software.SPDF.model.AttemptCounterTest" time="0.001"/>
+  <testcase name="constructor_SetsInitialValues()" classname="stirling.software.SPDF.model.AttemptCounterTest" time="0.001"/>
+  <testcase name="increment_IncrementsCountAndUpdatesTime()" classname="stirling.software.SPDF.model.AttemptCounterTest" time="0.013"/>
+  <testcase name="currentTimeApproximation()" classname="stirling.software.SPDF.model.AttemptCounterTest" time="0.038"/>
+  <testcase name="reset_ResetsCountAndUpdatesTime()" classname="stirling.software.SPDF.model.AttemptCounterTest" time="0.008"/>
+  <testcase name="math_mutations()" classname="stirling.software.SPDF.model.AttemptCounterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -48,6 +48,7 @@ dependencies {
 
     // --- Pitest JUnit 5 Plugin --- <--- ADD THIS
     pitest 'org.pitest:pitest-junit5-plugin:1.2.1' // Add the plugin for JUnit 5 support
+    implementation 'com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20240325.1'
 }
 
 test {
@@ -55,12 +56,12 @@ test {
 }
 
 pitest {
-    targetClasses = ['stirling.software.SPDF.utils.ErrorUtils'] // Adjust package if needed
-    targetTests = ['stirling.software.SPDF.utils.ErrorUtilsTest']   // Adjust package if needed
+    targetClasses = ['stirling.software.SPDF.utils.ErrorUtils', 'stirling.software.SPDF.utils.FileInfo', 'stirling.software.SPDF.utils.CustomHtmlSanitizer', 'stirling.software.SPDF.model.AttemptCounter'] // Adjust package if needed
+    targetTests = ['stirling.software.SPDF.utils.ErrorUtilsTest', 'stirling.software.SPDF.utils.FileInfoTest', 'stirling.software.SPDF.utils.CustomHtmlSanitizerTest', 'stirling.software.SPDF.model.AttemptCounterTest']   // Adjust package if needed
     // Add other minimal pitest configs if desired (threads, outputFormats)
     // DO NOT add excludedClasses, avoidCallsTo etc. unless absolutely necessary
     threads = 2
     outputFormats = ['HTML']
     timestampedReports = false
-    // useClasspathJar = true // Probably not needed with so few dependencies, but harmless
+    useClasspathJar = true // Probably not needed with so few dependencies, but harmless
 }
