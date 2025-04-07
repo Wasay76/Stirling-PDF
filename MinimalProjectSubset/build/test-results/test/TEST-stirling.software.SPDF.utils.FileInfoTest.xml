@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="stirling.software.SPDF.utils.FileInfoTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-04-07T09:05:20" hostname="DESKTOP-LLJ74U5" time="0.027">
+<testsuite name="stirling.software.SPDF.utils.FileInfoTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-04-07T09:30:23" hostname="DESKTOP-LLJ74U5" time="0.014">
   <properties/>
-  <testcase name="1: fileSize=0" classname="stirling.software.SPDF.utils.FileInfoTest" time="0.02"/>
+  <testcase name="1: fileSize=0" classname="stirling.software.SPDF.utils.FileInfoTest" time="0.009"/>
   <testcase name="2: fileSize=1023" classname="stirling.software.SPDF.utils.FileInfoTest" time="0.001"/>
   <testcase name="3: fileSize=1024" classname="stirling.software.SPDF.utils.FileInfoTest" time="0.001"/>
-  <testcase name="4: fileSize=1048575" classname="stirling.software.SPDF.utils.FileInfoTest" time="0.0"/>
+  <testcase name="4: fileSize=1048575" classname="stirling.software.SPDF.utils.FileInfoTest" time="0.001"/>
   <testcase name="5: fileSize=1048576" classname="stirling.software.SPDF.utils.FileInfoTest" time="0.0"/>
-  <testcase name="6: fileSize=1073741823" classname="stirling.software.SPDF.utils.FileInfoTest" time="0.001"/>
+  <testcase name="6: fileSize=1073741823" classname="stirling.software.SPDF.utils.FileInfoTest" time="0.0"/>
   <testcase name="7: fileSize=1073741824" classname="stirling.software.SPDF.utils.FileInfoTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

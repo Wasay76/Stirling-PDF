@@ -15,7 +15,7 @@ plugins {
 pitest {
     targetClasses = ['stirling.software.SPDF.utils.ErrorUtils']
     targetTests = ['stirling.software.SPDF.utils.ErrorUtilsTest']
-    excludedClasses = ['stirling.software.SPDF.config.*', 'stirling.software.SPDF.model.*']
+    //excludedClasses = ['stirling.software.SPDF.config.*', 'stirling.software.SPDF.model.*']
     threads = 2  // Reduced from 4 to reduce command size
     outputFormats = ['HTML']  // Reduced from ['XML', 'HTML'] to just one format
     mutators = ['DEFAULTS']
