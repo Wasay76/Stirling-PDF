@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2025-04-07T09:30:23" hostname="DESKTOP-LLJ74U5" time="0.041">
+<testsuite name="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2025-04-07T23:23:02" hostname="DESKTOP-LLJ74U5" time="0.045">
   <properties/>
-  <testcase name="sanitize_IdempotencyTest_MultipleSanitizationsYieldSameResult()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.025"/>
+  <testcase name="sanitize_IdempotencyTest_MultipleSanitizationsYieldSameResult()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.026"/>
   <testcase name="sanitize_ReturnValueVerification_ReturnsActualSanitizedValue()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.0"/>
   <testcase name="[1] null" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.0"/>
   <testcase name="[2] " classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.001"/>
   <testcase name="[3] " classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.001"/>
-  <testcase name="[4]  " classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.0"/>
-  <testcase name="[5] &#9;" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.0"/>
+  <testcase name="[4]  " classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.001"/>
+  <testcase name="[5] &#9;" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.001"/>
   <testcase name="[6] &#10;" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.0"/>
   <testcase name="sanitize_WithSimpleText_ReturnsSameText()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.0"/>
   <testcase name="sanitize_WithNullInput_ReturnsEmptyString()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.0"/>
-  <testcase name="sanitize_WithImageTag_KeepsImageTag()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.0"/>
+  <testcase name="sanitize_WithImageTag_KeepsImageTag()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.001"/>
   <testcase name="sanitize_WithMaliciousInput_SanitizesCorrectly()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.0"/>
-  <testcase name="sanitize_WithComplexNestedStructure_PreservesStructure()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.001"/>
+  <testcase name="sanitize_WithComplexNestedStructure_PreservesStructure()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.0"/>
   <testcase name="sanitize_WithAllowedHtml_KeepsAllowedElements()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.0"/>
-  <testcase name="sanitize_WithTableElements_KeepsTableElements()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.0"/>
-  <testcase name="sanitize_WithStyleAttributes_KeepsStyleAttributes()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.003"/>
-  <testcase name="sanitize_WithDisallowedElements_RemovesDisallowedElements()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.001"/>
+  <testcase name="sanitize_WithTableElements_KeepsTableElements()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.001"/>
+  <testcase name="sanitize_WithStyleAttributes_KeepsStyleAttributes()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.004"/>
+  <testcase name="sanitize_WithDisallowedElements_RemovesDisallowedElements()" classname="stirling.software.SPDF.utils.CustomHtmlSanitizerTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

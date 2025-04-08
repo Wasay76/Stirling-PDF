@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.236s</div>
+<div class="counter">0.293s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,19 +81,19 @@
 <tr>
 <td class="success">meterFilter_CaseSensitivity_ShouldDenyDifferentCase()</td>
 <td class="success">meterFilter_CaseSensitivity_ShouldDenyDifferentCase()</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">meterFilter_ShouldAllowHttpRequests()</td>
 <td class="success">meterFilter_ShouldAllowHttpRequests()</td>
-<td class="success">0.017s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] other.metric</td>
 <td class="success">meterFilter_ShouldDenyOtherMetrics(String)[1]</td>
-<td class="success">0.005s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -111,7 +111,7 @@
 <tr>
 <td class="success">[4] HTTP.REQUESTS</td>
 <td class="success">meterFilter_ShouldDenyOtherMetrics(String)[4]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -123,19 +123,19 @@
 <tr>
 <td class="success">meterFilter_WithActualMeterRegistry_Integration()</td>
 <td class="success">meterFilter_WithActualMeterRegistry_Integration()</td>
-<td class="success">0.210s</td>
+<td class="success">0.269s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">meterFilter_WithEmptyMetricName_ShouldDeny()</td>
 <td class="success">meterFilter_WithEmptyMetricName_ShouldDeny()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">meterFilter_WithNullId_ShouldHandleGracefully()</td>
-<td class="success">meterFilter_WithNullId_ShouldHandleGracefully()</td>
 <td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">meterFilter_WithNullId_ShouldHandleGracefully()</td>
+<td class="success">meterFilter_WithNullId_ShouldHandleGracefully()</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -143,23 +143,23 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>05:30:23,165 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.5.18
-05:30:23,166 |-INFO in ch.qos.logback.classic.util.ContextInitializer@389adf1d - Here is a list of configurators discovered as a service, by rank: 
-05:30:23,166 |-INFO in ch.qos.logback.classic.util.ContextInitializer@389adf1d -   org.springframework.boot.logging.logback.RootLogLevelConfigurator
-05:30:23,166 |-INFO in ch.qos.logback.classic.util.ContextInitializer@389adf1d - They will be invoked in order until ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY is returned.
-05:30:23,166 |-INFO in ch.qos.logback.classic.util.ContextInitializer@389adf1d - Constructed configurator of type class org.springframework.boot.logging.logback.RootLogLevelConfigurator
-05:30:23,171 |-INFO in ch.qos.logback.classic.util.ContextInitializer@389adf1d - org.springframework.boot.logging.logback.RootLogLevelConfigurator.configure() call lasted 0 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
-05:30:23,171 |-INFO in ch.qos.logback.classic.util.ContextInitializer@389adf1d - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
-05:30:23,171 |-INFO in ch.qos.logback.classic.util.ContextInitializer@389adf1d - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
-05:30:23,172 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
-05:30:23,172 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
-05:30:23,172 |-INFO in ch.qos.logback.classic.util.ContextInitializer@389adf1d - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 1 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
-05:30:23,172 |-INFO in ch.qos.logback.classic.util.ContextInitializer@389adf1d - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
-05:30:23,173 |-INFO in ch.qos.logback.classic.util.ContextInitializer@389adf1d - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
-05:30:23,173 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-05:30:23,174 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/F:/School/University-Winter-2025/COE891/final%20project/Stirling-PDF/MinimalProjectSubset/build/resources/main/logback.xml]
-05:30:23,254 |-INFO in ch.qos.logback.core.model.processor.DefineModelHandler - About to instantiate property definer of type [stirling.software.SPDF.config.LogbackPropertyLoader]
-05:30:23,255 |-ERROR in ch.qos.logback.core.model.processor.DefineModelHandler - Could not create an PropertyDefiner of type [stirling.software.SPDF.config.LogbackPropertyLoader]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
+<pre>19:23:02,285 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.5.18
+19:23:02,287 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7bf9b098 - Here is a list of configurators discovered as a service, by rank: 
+19:23:02,287 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7bf9b098 -   org.springframework.boot.logging.logback.RootLogLevelConfigurator
+19:23:02,287 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7bf9b098 - They will be invoked in order until ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY is returned.
+19:23:02,287 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7bf9b098 - Constructed configurator of type class org.springframework.boot.logging.logback.RootLogLevelConfigurator
+19:23:02,294 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7bf9b098 - org.springframework.boot.logging.logback.RootLogLevelConfigurator.configure() call lasted 0 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+19:23:02,294 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7bf9b098 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+19:23:02,295 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7bf9b098 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+19:23:02,301 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+19:23:02,302 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+19:23:02,302 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7bf9b098 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 7 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+19:23:02,302 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7bf9b098 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+19:23:02,305 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7bf9b098 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+19:23:02,305 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+19:23:02,309 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/F:/School/University-Winter-2025/COE891/final%20project/Stirling-PDF/MinimalProjectSubset/build/resources/main/logback.xml]
+19:23:02,408 |-INFO in ch.qos.logback.core.model.processor.DefineModelHandler - About to instantiate property definer of type [stirling.software.SPDF.config.LogbackPropertyLoader]
+19:23:02,409 |-ERROR in ch.qos.logback.core.model.processor.DefineModelHandler - Could not create an PropertyDefiner of type [stirling.software.SPDF.config.LogbackPropertyLoader]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
 	at ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
 	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:69)
 	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:44)
@@ -279,7 +279,7 @@ Caused by: java.lang.ClassNotFoundException: stirling.software.SPDF.config.Logba
 	at 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
 	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:56)
 	at 	... 111 common frames omitted
-05:30:23,255 |-ERROR in ch.qos.logback.core.model.processor.DefaultProcessor@2c177f9e - Failed to traverse model define ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
+19:23:02,409 |-ERROR in ch.qos.logback.core.model.processor.DefaultProcessor@33617539 - Failed to traverse model define ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
 	at ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
 	at 	at ch.qos.logback.core.model.processor.DefineModelHandler.handle(DefineModelHandler.java:93)
 	at 	at ch.qos.logback.core.model.processor.DefaultProcessor.mainTraverse(DefaultProcessor.java:203)
@@ -402,8 +402,8 @@ Caused by: java.lang.ClassNotFoundException: stirling.software.SPDF.config.Logba
 	at 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
 	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:56)
 	at 	... 111 common frames omitted
-05:30:23,258 |-INFO in ch.qos.logback.core.model.processor.DefineModelHandler - About to instantiate property definer of type [stirling.software.SPDF.config.LogbackPropertyLoader]
-05:30:23,258 |-ERROR in ch.qos.logback.core.model.processor.DefineModelHandler - Could not create an PropertyDefiner of type [stirling.software.SPDF.config.LogbackPropertyLoader]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
+19:23:02,413 |-INFO in ch.qos.logback.core.model.processor.DefineModelHandler - About to instantiate property definer of type [stirling.software.SPDF.config.LogbackPropertyLoader]
+19:23:02,413 |-ERROR in ch.qos.logback.core.model.processor.DefineModelHandler - Could not create an PropertyDefiner of type [stirling.software.SPDF.config.LogbackPropertyLoader]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
 	at ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
 	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:69)
 	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:44)
@@ -524,7 +524,7 @@ Caused by: java.lang.ClassNotFoundException: stirling.software.SPDF.config.Logba
 	at 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
 	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:56)
 	at 	... 112 common frames omitted
-05:30:23,258 |-ERROR in ch.qos.logback.core.model.processor.DefaultProcessor@2c177f9e - Failed to traverse model define ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
+19:23:02,413 |-ERROR in ch.qos.logback.core.model.processor.DefaultProcessor@33617539 - Failed to traverse model define ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
 	at ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
 	at 	at ch.qos.logback.core.model.processor.DefineModelHandler.handle(DefineModelHandler.java:93)
 	at 	at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:241)
@@ -648,45 +648,45 @@ Caused by: java.lang.ClassNotFoundException: stirling.software.SPDF.config.Logba
 	at 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
 	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:56)
 	at 	... 112 common frames omitted
-05:30:23,258 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
-05:30:23,259 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-05:30:23,263 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-05:30:23,298 |-INFO in ch.qos.logback.core.ConsoleAppender[CONSOLE] - BEWARE: Writing to the console can be very slow. Avoid logging to the 
-05:30:23,298 |-INFO in ch.qos.logback.core.ConsoleAppender[CONSOLE] - console in production environments, especially in high volume systems.
-05:30:23,298 |-INFO in ch.qos.logback.core.ConsoleAppender[CONSOLE] - See also https://logback.qos.ch/codes.html#slowConsole
-05:30:23,298 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [AUTHLOG]
-05:30:23,298 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
-05:30:23,301 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5db4c359 - value &quot;LOG_PATH_IS_UNDEFINED/invalid-auths.log&quot; substituted for &quot;${LOG_PATH}/invalid-auths.log&quot;
-05:30:23,301 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-05:30:23,304 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5db4c359 - value &quot;LOG_PATH_IS_UNDEFINED/auth-%d{yyyy-MM-dd}.log&quot; substituted for &quot;${LOG_PATH}/auth-%d{yyyy-MM-dd}.log&quot;
-05:30:23,306 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@546796969 - No compression will be used
-05:30:23,309 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@546796969 - Will use the pattern LOG_PATH_IS_UNDEFINED/auth-%d{yyyy-MM-dd}.log for the active file
-05:30:23,312 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'LOG_PATH_IS_UNDEFINED/auth-%d{yyyy-MM-dd}.log'.
-05:30:23,312 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
-05:30:23,312 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to 2025-04-07T09:29:21.197Z
-05:30:23,315 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[AUTHLOG] - Active log file name: LOG_PATH_IS_UNDEFINED/invalid-auths.log
-05:30:23,315 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[AUTHLOG] - File property is set to [LOG_PATH_IS_UNDEFINED/invalid-auths.log]
-05:30:23,316 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [GENERAL]
-05:30:23,316 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
-05:30:23,316 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5db4c359 - value &quot;LOG_PATH_IS_UNDEFINED/info.log&quot; substituted for &quot;${LOG_PATH}/info.log&quot;
-05:30:23,316 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-05:30:23,317 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@5db4c359 - value &quot;LOG_PATH_IS_UNDEFINED/info-%d{yyyy-MM-dd}.log&quot; substituted for &quot;${LOG_PATH}/info-%d{yyyy-MM-dd}.log&quot;
-05:30:23,317 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@417797183 - No compression will be used
-05:30:23,317 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@417797183 - Will use the pattern LOG_PATH_IS_UNDEFINED/info-%d{yyyy-MM-dd}.log for the active file
-05:30:23,317 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'LOG_PATH_IS_UNDEFINED/info-%d{yyyy-MM-dd}.log'.
-05:30:23,317 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
-05:30:23,318 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to 2025-04-07T09:29:21.198Z
-05:30:23,318 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[GENERAL] - Active log file name: LOG_PATH_IS_UNDEFINED/info.log
-05:30:23,318 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[GENERAL] - File property is set to [LOG_PATH_IS_UNDEFINED/info.log]
-05:30:23,318 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
-05:30:23,318 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
-05:30:23,319 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [GENERAL] to Logger[ROOT]
-05:30:23,319 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [stirling.software.SPDF.config.security.CustomAuthenticationFailureHandler] to ERROR
-05:30:23,320 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [stirling.software.SPDF.config.security.CustomAuthenticationFailureHandler] to false
-05:30:23,320 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[stirling.software.SPDF.config.security.CustomAuthenticationFailureHandler]
-05:30:23,320 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [AUTHLOG] to Logger[stirling.software.SPDF.config.security.CustomAuthenticationFailureHandler]
-05:30:23,320 |-INFO in ch.qos.logback.core.model.processor.DefineModelHandler - About to instantiate property definer of type [stirling.software.SPDF.config.LogbackPropertyLoader]
-05:30:23,320 |-ERROR in ch.qos.logback.core.model.processor.DefineModelHandler - Could not create an PropertyDefiner of type [stirling.software.SPDF.config.LogbackPropertyLoader]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
+19:23:02,413 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+19:23:02,413 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+19:23:02,418 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:23:02,454 |-INFO in ch.qos.logback.core.ConsoleAppender[CONSOLE] - BEWARE: Writing to the console can be very slow. Avoid logging to the 
+19:23:02,454 |-INFO in ch.qos.logback.core.ConsoleAppender[CONSOLE] - console in production environments, especially in high volume systems.
+19:23:02,454 |-INFO in ch.qos.logback.core.ConsoleAppender[CONSOLE] - See also https://logback.qos.ch/codes.html#slowConsole
+19:23:02,454 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [AUTHLOG]
+19:23:02,454 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+19:23:02,456 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@2c177f9e - value &quot;LOG_PATH_IS_UNDEFINED/invalid-auths.log&quot; substituted for &quot;${LOG_PATH}/invalid-auths.log&quot;
+19:23:02,457 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:23:02,459 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@2c177f9e - value &quot;LOG_PATH_IS_UNDEFINED/auth-%d{yyyy-MM-dd}.log&quot; substituted for &quot;${LOG_PATH}/auth-%d{yyyy-MM-dd}.log&quot;
+19:23:02,462 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1572127577 - No compression will be used
+19:23:02,465 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1572127577 - Will use the pattern LOG_PATH_IS_UNDEFINED/auth-%d{yyyy-MM-dd}.log for the active file
+19:23:02,468 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'LOG_PATH_IS_UNDEFINED/auth-%d{yyyy-MM-dd}.log'.
+19:23:02,468 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+19:23:02,469 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to 2025-04-07T09:29:21.197Z
+19:23:02,472 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[AUTHLOG] - Active log file name: LOG_PATH_IS_UNDEFINED/invalid-auths.log
+19:23:02,472 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[AUTHLOG] - File property is set to [LOG_PATH_IS_UNDEFINED/invalid-auths.log]
+19:23:02,473 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [GENERAL]
+19:23:02,473 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+19:23:02,473 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@2c177f9e - value &quot;LOG_PATH_IS_UNDEFINED/info.log&quot; substituted for &quot;${LOG_PATH}/info.log&quot;
+19:23:02,473 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:23:02,473 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@2c177f9e - value &quot;LOG_PATH_IS_UNDEFINED/info-%d{yyyy-MM-dd}.log&quot; substituted for &quot;${LOG_PATH}/info-%d{yyyy-MM-dd}.log&quot;
+19:23:02,473 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@546796969 - No compression will be used
+19:23:02,474 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@546796969 - Will use the pattern LOG_PATH_IS_UNDEFINED/info-%d{yyyy-MM-dd}.log for the active file
+19:23:02,474 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'LOG_PATH_IS_UNDEFINED/info-%d{yyyy-MM-dd}.log'.
+19:23:02,474 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+19:23:02,474 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to 2025-04-07T09:29:21.198Z
+19:23:02,474 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[GENERAL] - Active log file name: LOG_PATH_IS_UNDEFINED/info.log
+19:23:02,474 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[GENERAL] - File property is set to [LOG_PATH_IS_UNDEFINED/info.log]
+19:23:02,475 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+19:23:02,475 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+19:23:02,475 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [GENERAL] to Logger[ROOT]
+19:23:02,476 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [stirling.software.SPDF.config.security.CustomAuthenticationFailureHandler] to ERROR
+19:23:02,478 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [stirling.software.SPDF.config.security.CustomAuthenticationFailureHandler] to false
+19:23:02,478 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[stirling.software.SPDF.config.security.CustomAuthenticationFailureHandler]
+19:23:02,478 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [AUTHLOG] to Logger[stirling.software.SPDF.config.security.CustomAuthenticationFailureHandler]
+19:23:02,478 |-INFO in ch.qos.logback.core.model.processor.DefineModelHandler - About to instantiate property definer of type [stirling.software.SPDF.config.LogbackPropertyLoader]
+19:23:02,478 |-ERROR in ch.qos.logback.core.model.processor.DefineModelHandler - Could not create an PropertyDefiner of type [stirling.software.SPDF.config.LogbackPropertyLoader]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
 	at ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
 	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:69)
 	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:44)
@@ -807,7 +807,7 @@ Caused by: java.lang.ClassNotFoundException: stirling.software.SPDF.config.Logba
 	at 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
 	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:56)
 	at 	... 112 common frames omitted
-05:30:23,320 |-ERROR in ch.qos.logback.core.model.processor.DefaultProcessor@2c177f9e - Failed to traverse model define ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
+19:23:02,478 |-ERROR in ch.qos.logback.core.model.processor.DefaultProcessor@33617539 - Failed to traverse model define ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
 	at ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type stirling.software.SPDF.config.LogbackPropertyLoader
 	at 	at ch.qos.logback.core.model.processor.DefineModelHandler.handle(DefineModelHandler.java:93)
 	at 	at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:241)
@@ -931,9 +931,9 @@ Caused by: java.lang.ClassNotFoundException: stirling.software.SPDF.config.Logba
 	at 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
 	at 	at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:56)
 	at 	... 112 common frames omitted
-05:30:23,320 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@2c177f9e - End of configuration.
-05:30:23,321 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@f9b7332 - Registering current configuration as safe fallback point
-05:30:23,321 |-INFO in ch.qos.logback.classic.util.ContextInitializer@389adf1d - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 148 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+19:23:02,478 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@33617539 - End of configuration.
+19:23:02,479 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@18e7143f - Registering current configuration as safe fallback point
+19:23:02,479 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7bf9b098 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 174 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
 
 </pre>
 </span>
@@ -946,7 +946,7 @@ Caused by: java.lang.ClassNotFoundException: stirling.software.SPDF.config.Logba
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.12</a> at Apr 7, 2025, 5:30:24 AM</p>
+<a href="http://www.gradle.org">Gradle 8.12</a> at Apr 7, 2025, 7:23:03 PM</p>
 </div>
 </div>
 </body>
