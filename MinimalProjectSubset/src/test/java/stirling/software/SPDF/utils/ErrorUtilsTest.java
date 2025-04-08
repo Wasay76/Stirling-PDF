@@ -150,4 +150,86 @@ public class ErrorUtilsTest {
         assertEquals(expectedStackTrace, actualStackTrace2, 
                 "Stack trace in modelAndView should match expected");
     }
+    
+    // ================================================================
+    // ISP TESTING: Additional tests using Boundary Value Analysis (BVA)
+    // ================================================================
+    
+    @Test
+    public void isp_testExceptionToModel_EmptyMessage() {
+        // Boundary: Exception with an empty string as message
+        Model model = new ConcurrentModel();
+        Exception ex = new Exception("");
+        Model resultModel = ErrorUtils.exceptionToModel(model, ex);
+        assertNotNull(resultModel);
+        assertEquals("", resultModel.getAttribute("errorMessage"), "Empty message should return empty string");
+        assertNotNull(resultModel.getAttribute("stackTrace"));
+    }
+    
+    @Test
+    public void isp_testExceptionToModel_OneCharMessage() {
+        // Boundary: Exception with a one-character message
+        Model model = new ConcurrentModel();
+        Exception ex = new Exception("A");
+        Model resultModel = ErrorUtils.exceptionToModel(model, ex);
+        assertNotNull(resultModel);
+        assertEquals("A", resultModel.getAttribute("errorMessage"), "One-char message should be returned correctly");
+        assertNotNull(resultModel.getAttribute("stackTrace"));
+        assertTrue(((String) resultModel.getAttribute("stackTrace")).contains("A"), "Stack trace should contain the one-char message");
+    }
+    
+    @Test
+    public void isp_testExceptionToModel_LongMessage() {
+        // Boundary: Exception with an extremely long message
+        Model model = new ConcurrentModel();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 1000; i++) {
+            sb.append("X");
+        }
+        String longMessage = sb.toString();
+        Exception ex = new Exception(longMessage);
+        Model resultModel = ErrorUtils.exceptionToModel(model, ex);
+        assertNotNull(resultModel);
+        assertEquals(longMessage, resultModel.getAttribute("errorMessage"), "Long message should be returned fully");
+        assertNotNull(resultModel.getAttribute("stackTrace"));
+    }
+    
+    @Test
+    public void isp_testExceptionToModelView_EmptyMessage() {
+        // Boundary: Using ModelAndView with an exception that has an empty message
+        Model model = new ConcurrentModel();
+        Exception ex = new Exception("");
+        ModelAndView resultModelAndView = ErrorUtils.exceptionToModelView(model, ex);
+        assertNotNull(resultModelAndView);
+        assertEquals("", resultModelAndView.getModel().get("errorMessage"), "Empty message should return empty string");
+        assertNotNull(resultModelAndView.getModel().get("stackTrace"));
+    }
+    
+    @Test
+    public void isp_testExceptionToModelView_OneCharMessage() {
+        // Boundary: Using ModelAndView with an exception that has a one-character message
+        Model model = new ConcurrentModel();
+        Exception ex = new Exception("B");
+        ModelAndView resultModelAndView = ErrorUtils.exceptionToModelView(model, ex);
+        assertNotNull(resultModelAndView);
+        assertEquals("B", resultModelAndView.getModel().get("errorMessage"), "One-char message should be returned correctly");
+        assertNotNull(resultModelAndView.getModel().get("stackTrace"));
+        assertTrue(((String) resultModelAndView.getModel().get("stackTrace")).contains("B"), "Stack trace should contain the one-char message");
+    }
+    
+    @Test
+    public void isp_testExceptionToModelView_LongMessage() {
+        // Boundary: Using ModelAndView with an exception that has an extremely long message
+        Model model = new ConcurrentModel();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 1000; i++) {
+            sb.append("Y");
+        }
+        String longMessage = sb.toString();
+        Exception ex = new Exception(longMessage);
+        ModelAndView resultModelAndView = ErrorUtils.exceptionToModelView(model, ex);
+        assertNotNull(resultModelAndView);
+        assertEquals(longMessage, resultModelAndView.getModel().get("errorMessage"), "Long message should be returned fully");
+        assertNotNull(resultModelAndView.getModel().get("stackTrace"));
+    }
 }
