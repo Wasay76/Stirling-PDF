@@ -194,5 +194,12 @@ id_ed25519.pub
 node_modules/
 *.mjs
 /MinimalProjectSubset/.gradle/8.12/executionHistory
-/MinimalProjectSubset/.gradle/8.12/executionHistory
 /Stirling-PDF-main/.gradle/8.12/fileHashes
+/MinimalProjectSubset/.gradle/8.10/checksums
+/MinimalProjectSubset/build
+/MinimalProjectSubset/.gradle/8.10/checksums
+/MinimalProjectSubset/.gradle/8.10/fileChanges
+/MinimalProjectSubset/.gradle/8.10/fileHashes
+/MinimalProjectSubset/.gradle/8.10/checksums
+/MinimalProjectSubset/.gradle/8.12/fileHashes
+/MinimalProjectSubset/.gradle/8.12/fileHashes
