@@ -1,4 +1,4 @@
-package stirling.software.Stirling.Stats;
+package stirling.software.SPDF.stats;
 
 import java.nio.file.*;
 import java.nio.charset.MalformedInputException;
@@ -10,13 +10,18 @@ public class PropSync {
 
     public static void main(String[] args) throws IOException {
         File folder = new File("C:\\Users\\systo\\git\\Stirling-PDF\\src\\main\\resources");
+        processFiles(folder, "messages_en_GB.properties");
+    }
+    
+    // Extracted method to make testing possible
+    public static void processFiles(File folder, String baseFileName) throws IOException {
         File[] files = folder.listFiles((dir, name) -> name.matches("messages_.*\\.properties"));
 
-        List<String> enLines = Files.readAllLines(Paths.get(folder + "\\messages_en_GB.properties"), StandardCharsets.UTF_8);
+        List<String> enLines = Files.readAllLines(Paths.get(folder.getPath(), baseFileName), StandardCharsets.UTF_8);
         Map<String, String> enProps = linesToProps(enLines);
 
         for (File file : files) {
-            if (!"messages_en_GB.properties".equals(file.getName())) {
+            if (!baseFileName.equals(file.getName())) {
                 System.out.println("Processing file: " + file.getName());
                 List<String> lines;
                 try {
@@ -37,7 +42,8 @@ public class PropSync {
         }
     }
 
-    private static Map<String, String> linesToProps(List<String> lines) {
+    // Changed to public for testing
+    public static Map<String, String> linesToProps(List<String> lines) {
         Map<String, String> props = new LinkedHashMap<>();
         for (String line : lines) {
             if (!line.trim().isEmpty() && line.contains("=")) {
@@ -48,7 +54,8 @@ public class PropSync {
         return props;
     }
 
-    private static List<String> syncPropsWithLines(Map<String, String> enProps, Map<String, String> currentProps, List<String> enLines) {
+    // Changed to public for testing
+    public static List<String> syncPropsWithLines(Map<String, String> enProps, Map<String, String> currentProps, List<String> enLines) {
         List<String> newLines = new ArrayList<>();
         boolean needsTranslateComment = false; // flag to check if we need to add "TODO: Translate"
 
