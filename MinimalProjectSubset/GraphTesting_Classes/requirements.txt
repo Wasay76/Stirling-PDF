@@ -1,0 +1,11 @@
+The 5 classes worked on for graph-based testing can be found in the Classes files. The corresponding 5 test classes can be found in the Tests folder. 
+
+In order to run the tests for yourself, first clone the official Stirling pdf repo located at https://github.com/Stirling-Tools/Stirling-PDF. After you have cloned the official project, copy the 5 test classes which have been altered to the correct location in the projects 'test file'. The 5 test files in the Striling project can be found at:
+
+"Stirling-PDF\src\test\java\stirling\software\SPDF\utils\PdfUtilsTest.java"
+"Stirling-PDF\src\test\java\stirling\software\SPDF\utils\FileToPdfTest.java"
+"Stirling-PDF\src\test\java\stirling\software\SPDF\utils\UrlUtilsTest.java"
+"Stirling-PDF\src\test\java\stirling\software\SPDF\utils\PropertyConfigsTest.java"
+"Stirling-PDF\src\test\java\stirling\software\SPDF\utils\FileInfoTest.java"
+
+Replace them each with the corresponding tests find in the 'Tests' folder found here.
